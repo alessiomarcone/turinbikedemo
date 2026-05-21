@@ -7,7 +7,7 @@ export function Contact() {
             <div className="mb-4 text-xs uppercase tracking-[0.3em] text-ink/50">
               — Contattaci
             </div>
-            <h2 className="font-display text-5xl text-ink md:text-7xl">
+            <h2 className="font-display text-5xl text-crimson md:text-7xl">
               Scrivici.
               <br />
               <span className="italic text-ink/60">Ti rispondiamo in giornata.</span>
