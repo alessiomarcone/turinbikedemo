@@ -1,18 +1,18 @@
 export function Contact() {
   return (
-    <section id="contact" className="relative bg-ink py-24 md:py-36">
+    <section id="contact" className="relative bg-bone py-24 md:py-36">
       <div className="mx-auto max-w-[1600px] px-6 md:px-10">
         <div className="grid grid-cols-1 gap-16 md:grid-cols-2">
           <div>
-            <div className="mb-4 text-xs uppercase tracking-[0.3em] text-bone/50">
+            <div className="mb-4 text-xs uppercase tracking-[0.3em] text-ink/50">
               — Contattaci
             </div>
-            <h2 className="font-display text-5xl text-bone md:text-7xl">
+            <h2 className="font-display text-5xl text-ink md:text-7xl">
               Scrivici.
               <br />
-              <span className="italic text-bone/60">Ti rispondiamo in giornata.</span>
+              <span className="italic text-ink/60">Ti rispondiamo in giornata.</span>
             </h2>
-            <p className="mt-8 max-w-md text-bone/70">
+            <p className="mt-8 max-w-md text-ink/70">
               Hai domande sui nostri tour, sul noleggio o sull'officina? Scrivici e ti aiuteremo a trovare la soluzione perfetta per te.
             </p>
           </div>
@@ -33,7 +33,7 @@ export function Contact() {
 
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
               <div className="flex flex-col gap-2">
-                <label htmlFor="nome" className="text-xs uppercase tracking-[0.25em] text-bone/50">
+                <label htmlFor="nome" className="text-xs uppercase tracking-[0.25em] text-ink/50">
                   Nome
                 </label>
                 <input
@@ -41,11 +41,11 @@ export function Contact() {
                   name="nome"
                   type="text"
                   required
-                  className="border-b border-bone/30 bg-transparent pb-3 text-bone outline-none transition focus:border-bone"
+                  className="border-b border-ink/30 bg-transparent pb-3 text-ink outline-none transition focus:border-ink"
                 />
               </div>
               <div className="flex flex-col gap-2">
-                <label htmlFor="email" className="text-xs uppercase tracking-[0.25em] text-bone/50">
+                <label htmlFor="email" className="text-xs uppercase tracking-[0.25em] text-ink/50">
                   Email
                 </label>
                 <input
@@ -53,25 +53,25 @@ export function Contact() {
                   name="email"
                   type="email"
                   required
-                  className="border-b border-bone/30 bg-transparent pb-3 text-bone outline-none transition focus:border-bone"
+                  className="border-b border-ink/30 bg-transparent pb-3 text-ink outline-none transition focus:border-ink"
                 />
               </div>
             </div>
 
             <div className="flex flex-col gap-2">
-              <label htmlFor="telefono" className="text-xs uppercase tracking-[0.25em] text-bone/50">
+              <label htmlFor="telefono" className="text-xs uppercase tracking-[0.25em] text-ink/50">
                 Telefono
               </label>
               <input
                 id="telefono"
                 name="telefono"
                 type="tel"
-                className="border-b border-bone/30 bg-transparent pb-3 text-bone outline-none transition focus:border-bone"
+                className="border-b border-ink/30 bg-transparent pb-3 text-ink outline-none transition focus:border-ink"
               />
             </div>
 
             <div className="flex flex-col gap-2">
-              <label htmlFor="messaggio" className="text-xs uppercase tracking-[0.25em] text-bone/50">
+              <label htmlFor="messaggio" className="text-xs uppercase tracking-[0.25em] text-ink/50">
                 Messaggio
               </label>
               <textarea
@@ -79,13 +79,13 @@ export function Contact() {
                 name="messaggio"
                 required
                 rows={4}
-                className="resize-none border-b border-bone/30 bg-transparent pb-3 text-bone outline-none transition focus:border-bone"
+                className="resize-none border-b border-ink/30 bg-transparent pb-3 text-ink outline-none transition focus:border-ink"
               />
             </div>
 
             <button
               type="submit"
-              className="mt-2 inline-flex w-fit items-center gap-2 rounded-full bg-primary px-8 py-3.5 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition hover:scale-[1.03] active:scale-95"
+              className="mt-2 inline-flex w-fit items-center gap-2 rounded-full bg-ink px-8 py-3.5 text-sm font-semibold uppercase tracking-wider text-bone transition hover:scale-[1.03] active:scale-95"
             >
               Invia messaggio <span aria-hidden>→</span>
             </button>
