@@ -12,6 +12,7 @@ export function Nav() {
           <a href="#rent" className="hover:opacity-70 transition">Noleggio</a>
           <a href="#workshop" className="hover:opacity-70 transition">Officina</a>
           <a href="#stories" className="hover:opacity-70 transition">Stories</a>
+          <a href="#contact" className="hover:opacity-70 transition">Contatti</a>
         </nav>
         <a
           href="#rent"
