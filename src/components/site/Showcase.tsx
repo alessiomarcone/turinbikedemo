@@ -1,7 +1,7 @@
-import bikeRoad from "@/assets/bike-road-dark.jpg";
-import bikeGravel from "@/assets/bike-gravel-dark.jpg";
-import bikeEbike from "@/assets/bike-ebike-dark.jpg";
-import bikeMtb from "@/assets/bike-mtb-dark.jpg";
+import bikeRoad from "@/assets/bike-road.png";
+import bikeGravel from "@/assets/bike-gravel.png";
+import bikeEbike from "@/assets/bike-ebike.png";
+import bikeMtb from "@/assets/bike-mtb.png";
 
 const products = [
   { name: "Aero RS-01", type: "Road", price: "€4.200", tag: "Nuovo", image: bikeRoad },
