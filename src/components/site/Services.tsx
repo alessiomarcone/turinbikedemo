@@ -6,7 +6,7 @@ const cards = [
   {
     tag: "01 / Noleggio",
     title: "Noleggia. Esplora. Pedala.",
-    body: "Scegli la bici giusta — city, e-bike, gravel — e parti con una guida alla scoperta di Torino.",
+    body: "Scegli la bici giusta — city, e-bike, gravel — e parti alla scoperta di Torino con o senza guida.",
     img: turin,
     cta: "Prenota tour",
     href: "#rent",
@@ -14,7 +14,7 @@ const cards = [
   {
     tag: "02 / Vendita",
     title: "Lo shop su due piani.",
-    body: "Bici, abbigliamento, accessori e ricambi. I migliori brand selezionati per chi vive la bici ogni giorno.",
+    body: "Bici, abbigliamento, accessori e ricambi. I migliori brand, selezionati da chi la bici la vive davvero.",
     img: accessories,
     cta: "Entra nello shop",
     href: "#shop",
@@ -22,7 +22,7 @@ const cards = [
   {
     tag: "03 / Officina",
     title: "Mani esperte. Servizio express.",
-    body: "Tagliandi, riparazioni veloci e tuning su misura. La tua bici torna come nuova, e spesso in giornata.",
+    body: "Tagliandi, riparazioni e tuning su misura. La tua bici torna come nuova — spesso in giornata.",
     img: workshop,
     cta: "Porta la tua bici",
     href: "#workshop",
@@ -34,12 +34,15 @@ export function Services() {
     <section id="shop" className="relative py-24 md:py-36">
       <div className="mx-auto max-w-[1600px] px-6 md:px-10">
         <div className="mb-16 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
-          <div>
+          <div data-reveal="">
             <div className="mb-4 text-xs uppercase tracking-[0.3em] text-foreground/70">— Cosa facciamo</div>
-            <h2 className="font-display text-6xl md:text-8xl">Tre servizi.<br /><span className="italic text-foreground/80">Una passione.</span></h2>
+            <h2 className="font-display text-6xl md:text-8xl">
+              Tre servizi.<br />
+              <span className="italic text-foreground/80">Una passione.</span>
+            </h2>
           </div>
-          <p className="max-w-sm text-foreground/80">
-            Vivi la bici a 360°. Dal primo giro turistico in centro alla messa a punto di una gravel da viaggio.
+          <p className="max-w-sm text-foreground/80" data-reveal="" data-delay="2">
+            Dalla prima pedalata in città all'officina specializzata. Tutto quello di cui hai bisogno, in un posto solo.
           </p>
         </div>
 
@@ -48,8 +51,9 @@ export function Services() {
             <a
               key={c.tag}
               href={c.href}
+              data-reveal=""
+              data-delay={String(i + 1)}
               className="group relative flex flex-col overflow-hidden rounded-2xl bg-card text-card-foreground transition hover:-translate-y-1 hover:shadow-elevated"
-              style={{ animationDelay: `${i * 0.1}s` }}
             >
               <div className="relative aspect-[4/5] overflow-hidden">
                 <img
@@ -68,7 +72,9 @@ export function Services() {
                 <p className="text-sm text-card-foreground/70">{c.body}</p>
                 <div className="mt-auto flex items-center justify-between pt-4 text-sm font-semibold uppercase tracking-wider">
                   <span>{c.cta}</span>
-                  <span className="grid h-10 w-10 place-items-center rounded-full bg-bone text-ink transition group-hover:translate-x-1">→</span>
+                  <span className="grid h-10 w-10 place-items-center rounded-full bg-bone text-ink transition group-hover:translate-x-1">
+                    →
+                  </span>
                 </div>
               </div>
             </a>

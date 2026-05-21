@@ -163,4 +163,49 @@
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-12px); }
   }
+
+  .ticker-reverse {
+    animation: tickerReverse 60s linear infinite;
+  }
+  @keyframes tickerReverse {
+    from { transform: translateX(-50%); }
+    to { transform: translateX(0%); }
+  }
+
+  .scroll-line {
+    animation: scrollLine 1.8s ease-in-out infinite;
+  }
+  @keyframes scrollLine {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(250%); }
+  }
+}
+
+@layer base {
+  [data-reveal]:not([data-reveal="in"]) {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: none;
+  }
+  [data-reveal="in"] {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  [data-delay="1"][data-reveal="in"] { transition-delay: 0.08s; }
+  [data-delay="2"][data-reveal="in"] { transition-delay: 0.16s; }
+  [data-delay="3"][data-reveal="in"] { transition-delay: 0.24s; }
+  [data-delay="4"][data-reveal="in"] { transition-delay: 0.32s; }
+  [data-delay="5"][data-reveal="in"] { transition-delay: 0.40s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    [data-reveal]:not([data-reveal="in"]) {
+      opacity: 1;
+      transform: none;
+    }
+    [data-reveal="in"] {
+      transition: none !important;
+    }
+  }
 }

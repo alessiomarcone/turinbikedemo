@@ -27,11 +27,19 @@ export function Testimonials() {
     <section className="relative bg-background text-foreground">
       <div className="mx-auto max-w-[1600px] px-6 py-24 md:px-10 md:py-32">
         <div className="mb-14 flex items-end justify-between gap-6">
-          <div>
-            <p className="font-mono text-xs uppercase tracking-[0.3em] text-foreground/60">Voci dal manubrio</p>
-            <h2 className="mt-3 font-display text-5xl md:text-7xl">Chi ha pedalato<br />con noi.</h2>
+          <div data-reveal="">
+            <p className="font-mono text-xs uppercase tracking-[0.3em] text-foreground/60">
+              Voci dal manubrio
+            </p>
+            <h2 className="mt-3 font-display text-5xl md:text-7xl">
+              Chi ha pedalato<br />con noi.
+            </h2>
           </div>
-          <div className="hidden md:flex items-center gap-2 font-mono text-xs uppercase tracking-[0.25em] text-foreground/70">
+          <div
+            className="hidden md:flex items-center gap-2 font-mono text-xs uppercase tracking-[0.25em] text-foreground/70"
+            data-reveal=""
+            data-delay="2"
+          >
             <span className="inline-block size-2 rounded-full bg-foreground/80" />
             4.9 / 5 · 320+ recensioni
           </div>
@@ -41,6 +49,8 @@ export function Testimonials() {
           {REVIEWS.map((r, i) => (
             <article
               key={r.name}
+              data-reveal=""
+              data-delay={String(i + 1)}
               className="group relative flex flex-col justify-between gap-8 rounded-3xl border border-foreground/15 bg-foreground/5 p-8 backdrop-blur-sm transition hover:border-foreground/40 hover:-translate-y-1"
             >
               <div>

@@ -133,8 +133,8 @@ export function Hero() {
               <span className="italic text-foreground/80">the city.</span>
             </h1>
             <p className="mt-6 max-w-md text-base text-foreground/85 md:text-lg">
-              Bici, noleggio e officina nel cuore di Torino. Scegli la tua compagna di
-              viaggio — dalla carbon road alla e-bike urbana.
+              Dal Po alle Alpi, ogni strada racconta qualcosa. Noleggio, officina e shop
+              nel cuore di Torino — dal 2019.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
@@ -262,6 +262,16 @@ export function Hero() {
                   Prenota →
                 </a>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="flex justify-center pt-10 md:pt-16">
+          <div className="flex flex-col items-center gap-3 text-foreground/40">
+            <span className="font-mono text-[9px] uppercase tracking-[0.4em]">Scroll</span>
+            <div className="relative h-10 w-px overflow-hidden bg-foreground/20">
+              <span className="scroll-line absolute inset-x-0 top-0 h-1/2 bg-foreground/60" />
             </div>
           </div>
         </div>

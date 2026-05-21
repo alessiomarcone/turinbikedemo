@@ -3,17 +3,16 @@ export function Contact() {
     <section id="contact" className="relative bg-bone py-24 md:py-36">
       <div className="mx-auto max-w-[1600px] px-6 md:px-10">
         <div className="grid grid-cols-1 gap-16 md:grid-cols-2">
-          <div>
+          <div data-reveal="">
             <div className="mb-4 text-xs uppercase tracking-[0.3em] text-ink/50">
               — Contattaci
             </div>
             <h2 className="font-display text-5xl text-crimson md:text-7xl">
-              Scrivici.
-              <br />
+              Parliamo.<br />
               <span className="italic text-ink/60">Ti rispondiamo in giornata.</span>
             </h2>
             <p className="mt-8 max-w-md text-ink/70">
-              Hai domande sui nostri tour, sul noleggio o sull'officina? Scrivici e ti aiuteremo a trovare la soluzione perfetta per te.
+              Hai in mente un tour, hai bisogno di un consiglio sulla bici giusta, o la tua ha bisogno di cure? Scrivici — siamo qui.
             </p>
           </div>
 
@@ -23,6 +22,8 @@ export function Contact() {
             data-netlify="true"
             netlify-honeypot="bot-field"
             className="flex flex-col gap-6"
+            data-reveal=""
+            data-delay="2"
           >
             <input type="hidden" name="form-name" value="contact" />
             <p className="hidden">

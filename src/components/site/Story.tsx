@@ -5,20 +5,22 @@ export function Story() {
     <section id="stories" className="relative overflow-hidden bg-ink text-bone">
       <div className="mx-auto max-w-[1600px] px-6 py-24 md:px-10 md:py-32">
         <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-          <div>
-            <p className="font-mono text-xs uppercase tracking-[0.3em] text-bone/60">Field Notes · Cap. 01</p>
+          <div data-reveal="">
+            <p className="font-mono text-xs uppercase tracking-[0.3em] text-bone/60">
+              Field Notes · Cap. 01
+            </p>
             <h2 className="mt-3 font-display text-5xl md:text-7xl">
               Quattro giorni<br />sulle Alpi Cozie.
             </h2>
           </div>
-          <p className="max-w-md text-bone/75">
-            Una storia di vento, fango e amicizia. Il racconto di Marco, founder di Turinbike,
-            partito da Porta Palazzo verso il Colle delle Finestre con una gravel e un sacco a pelo.
+          <p className="max-w-md text-bone/75" data-reveal="" data-delay="2">
+            Una storia di vento, fango e silenzio. Il racconto di Marco, founder di Turinbike,
+            partito da Porta Palazzo verso il Colle delle Finestre con una gravel e nient'altro.
           </p>
         </div>
 
         <div className="grid gap-10 md:grid-cols-12">
-          <div className="md:col-span-7">
+          <div className="md:col-span-7" data-reveal="">
             <div className="group relative overflow-hidden rounded-3xl">
               <img
                 src={storyImg}
@@ -39,7 +41,7 @@ export function Story() {
             </div>
           </div>
 
-          <div className="md:col-span-5 flex flex-col justify-between gap-8">
+          <div className="md:col-span-5 flex flex-col justify-between gap-8" data-reveal="" data-delay="2">
             <div className="space-y-5 text-bone/85 leading-relaxed">
               <p className="font-display text-2xl text-bone">
                 "Non era una gara. Era un modo per ricordarmi perché ho aperto questa officina."
@@ -56,7 +58,9 @@ export function Story() {
             </div>
 
             <div className="flex items-center gap-4 border-t border-bone/15 pt-6">
-              <div className="size-12 rounded-full bg-bone/10 grid place-items-center font-display text-xl">M</div>
+              <div className="size-12 rounded-full bg-bone/10 grid place-items-center font-display text-xl">
+                M
+              </div>
               <div>
                 <p className="text-sm font-semibold">Marco Bertolino</p>
                 <p className="text-xs uppercase tracking-[0.2em] text-bone/60">Founder · Mechanic · Rider</p>
