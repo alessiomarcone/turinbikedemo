@@ -1,8 +1,13 @@
+import bikeRoad from "@/assets/bike-road-dark.jpg";
+import bikeGravel from "@/assets/bike-gravel-dark.jpg";
+import bikeEbike from "@/assets/bike-ebike-dark.jpg";
+import bikeMtb from "@/assets/bike-mtb-dark.jpg";
+
 const products = [
-  { name: "Aero RS-01", type: "Road", price: "€4.200", tag: "Nuovo" },
-  { name: "Gravel Vento", type: "Gravel", price: "€2.890", tag: "Best seller" },
-  { name: "City e-Drift", type: "E-bike urban", price: "€2.150", tag: "−15%" },
-  { name: "Trail MX-9", type: "MTB", price: "€3.450", tag: "Edition" },
+  { name: "Aero RS-01", type: "Road", price: "€4.200", tag: "Nuovo", image: bikeRoad },
+  { name: "Gravel Vento", type: "Gravel", price: "€2.890", tag: "Best seller", image: bikeGravel },
+  { name: "City e-Drift", type: "E-bike urban", price: "€2.150", tag: "−15%", image: bikeEbike },
+  { name: "Trail MX-9", type: "MTB", price: "€3.450", tag: "Edition", image: bikeMtb },
 ];
 
 export function Showcase() {
@@ -24,15 +29,15 @@ export function Showcase() {
                 <span>0{i + 1}</span>
                 <span>{p.tag}</span>
               </div>
-              <div className="relative my-6 grid place-items-center">
-                <svg viewBox="0 0 200 120" className="h-32 w-full" fill="none" stroke="currentColor" strokeWidth="2">
-                  <circle cx="48" cy="86" r="28" />
-                  <circle cx="152" cy="86" r="28" />
-                  <path d="M48 86 L96 36 L152 86 L96 86 Z" />
-                  <path d="M96 36 L112 22 L132 22" />
-                  <path d="M96 36 L96 28" />
-                  <circle cx="96" cy="86" r="6" fill="currentColor" />
-                </svg>
+              <div className="relative my-4 aspect-[4/3] overflow-hidden">
+                <img
+                  src={p.image}
+                  alt={`${p.name} — ${p.type}`}
+                  loading="lazy"
+                  width={1920}
+                  height={1080}
+                  className="h-full w-full object-contain transition duration-500 group-hover:scale-105"
+                />
               </div>
               <div>
                 <div className="text-xs uppercase tracking-[0.25em] opacity-70">{p.type}</div>
