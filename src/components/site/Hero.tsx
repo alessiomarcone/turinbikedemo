@@ -80,24 +80,13 @@ const BIKES: Bike[] = [
 
 export function Hero() {
   const ref = useRef<HTMLDivElement>(null);
-  const [t, setT] = useState({ x: 0, y: 0 });
   const [active, setActive] = useState<string | null>(null);
   const [idx, setIdx] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [dragging, setDragging] = useState(false);
+  const dragStartX = useRef(0);
 
   const bike = BIKES[idx];
-
-  useEffect(() => {
-    const onMove = (e: MouseEvent) => {
-      if (!ref.current) return;
-      const r = ref.current.getBoundingClientRect();
-      const x = (e.clientX - r.left - r.width / 2) / r.width;
-      const y = (e.clientY - r.top - r.height / 2) / r.height;
-      setT({ x, y });
-    };
-    window.addEventListener("mousemove", onMove);
-    return () => window.removeEventListener("mousemove", onMove);
-  }, []);
 
   useEffect(() => {
     if (paused) return;
@@ -106,6 +95,20 @@ export function Hero() {
   }, [paused]);
 
   const go = (n: number) => setIdx((n + BIKES.length) % BIKES.length);
+
+  const onPointerDown = (e: React.PointerEvent) => {
+    setDragging(true);
+    dragStartX.current = e.clientX;
+    (e.target as HTMLElement).setPointerCapture?.(e.pointerId);
+  };
+
+  const onPointerUp = (e: React.PointerEvent) => {
+    if (!dragging) return;
+    setDragging(false);
+    const diff = dragStartX.current - e.clientX;
+    if (diff > 50) setIdx((prev) => (prev + 1) % BIKES.length);
+    else if (diff < -50) setIdx((prev) => (prev - 1 + BIKES.length) % BIKES.length);
+  };
 
   return (
     <section className="relative grain overflow-hidden pt-32 pb-20 md:pt-40 md:pb-32">
