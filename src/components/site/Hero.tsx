@@ -164,11 +164,10 @@ export function Hero() {
             }}
           >
             <div
-              className="relative aspect-[16/11] overflow-hidden rounded-2xl bg-card"
-              style={{
-                transform: `perspective(1200px) rotateY(${t.x * 5}deg) rotateX(${-t.y * 3}deg)`,
-                transition: "transform 0.4s cubic-bezier(0.22,1,0.36,1)",
-              }}
+              className={`relative aspect-[16/11] overflow-hidden rounded-2xl bg-card select-none ${dragging ? "cursor-grabbing" : "cursor-grab"}`}
+              onPointerDown={onPointerDown}
+              onPointerUp={onPointerUp}
+              onPointerLeave={() => setDragging(false)}
             >
               {BIKES.map((b, i) => (
                 <img
